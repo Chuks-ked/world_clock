@@ -30,7 +30,7 @@ class WorldTime {
       time = now.toString();
     } catch (e) {
       print('caught error: $e');
-      time = 'could not get time data';
+      time = 'could not get time data ';
     }
   }
 }
