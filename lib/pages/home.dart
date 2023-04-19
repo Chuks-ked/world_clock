@@ -8,8 +8,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Map data = {};
+
   @override
   Widget build(BuildContext context) {
+    var data = ModalRoute.of(context)?.settings.arguments;
+
+    print(data);
+
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -20,7 +26,6 @@ class _HomeState extends State<Home> {
                 },
                 icon: Icon(Icons.edit_location),
                 label: Text('Edit Location')),
-            
             ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pushNamed(context, '/');
